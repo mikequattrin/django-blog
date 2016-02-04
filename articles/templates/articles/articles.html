@@ -1,0 +1,13 @@
+{% include "components/navigation.html" %}
+
+{% if article_list %}
+    <ul>
+    {% for article in article_list %}
+        <li>
+            <a href= "{% url 'article' article.id %}">{{ article.article_text }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No articles at the moment.</p>
+{% endif %}
