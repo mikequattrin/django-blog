@@ -1,3 +1,12 @@
+# Article Models
 from django.db import models
 
-# Create your models here.
+
+class Article(models.Model):
+    article_text = models.CharField(max_length=200, default = '')
+    article_author = models.CharField(max_length=200, default = '')
+    article_publication_date = models.DateTimeField('date published')
+    article_category = models.CharField(max_length=200, default = '')
+    article_hero_image = models.ImageField(upload_to='images/')
+    article_optional_image = models.ImageField(upload_to='images/')
+    article_body_text = models.TextField(default = '')

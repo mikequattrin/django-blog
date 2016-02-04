@@ -1,7 +1,6 @@
+# Article - App Views
 from django.shortcuts import render
 from django.http import HttpResponse
-
-# Article - App Views
 
 def index(request):
     return HttpResponse("Hello, world. Here is the homepage.")
