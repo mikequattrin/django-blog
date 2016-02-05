@@ -1,3 +1,8 @@
+{% load staticfiles %}
+
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'articles/styles/style.css' %}" />
+
 {% include "components/navigation.html" %}
 
 {{ article.article_text }}<br>
@@ -7,3 +12,5 @@
 <img src="../../media/{{ article.article_hero_image }}"><br>
 <img src="../../media/{{ article.article_optional_image }}"><br>
 {{ article.article_body_text }}<br>
+
+{% include "components/whattoreadnext.html" %}

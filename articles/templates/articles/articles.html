@@ -1,3 +1,8 @@
+{% load staticfiles %}
+
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{% static 'articles/styles/style.css' %}" />
+
 {% include "components/navigation.html" %}
 
 {% if article_list %}
@@ -11,3 +16,5 @@
 {% else %}
     <p>No articles at the moment.</p>
 {% endif %}
+
+{% include "components/whattoreadnext.html" %}
