@@ -3,14 +3,17 @@
 <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{% static 'articles/styles/style.css' %}" />
 
-{% include "components/navigation.html" %}
+<div class="body-wrapper">
+    {% include "components/navigation.html" %}
+    <div class="content-wrapper">
+        {{ article.article_text }}<br>
+        {{ article.article_author }}<br>
+        {{ article.article_publication_date }}<br>
+        {{ article.article_category }}<br>
+        <img src="../../media/{{ article.article_hero_image }}"><br>
+        <img src="../../media/{{ article.article_optional_image }}"><br>
+        {{ article.article_body_text }}<br>
 
-{{ article.article_text }}<br>
-{{ article.article_author }}<br>
-{{ article.article_publication_date }}<br>
-{{ article.article_category }}<br>
-<img src="../../media/{{ article.article_hero_image }}"><br>
-<img src="../../media/{{ article.article_optional_image }}"><br>
-{{ article.article_body_text }}<br>
-
-{% include "components/whattoreadnext.html" %}
+        {% include "components/whattoreadnext.html" %}
+    </div>
+</div>
