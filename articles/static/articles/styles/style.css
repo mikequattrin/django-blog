@@ -15,11 +15,14 @@ Mobile Styles
 .body-wrapper {
   max-width: 1024px;
   margin: 0 auto;
+
 }
 section ul {
   list-style: none;
 }
-
+.content-wrapper {
+  padding: 0 20px;
+}
 /*
 ---------------
 ---------------
@@ -170,7 +173,7 @@ Page Styles
 }
 
 .articles .articles-primary h1 {
-  font-size: 40px;
+  font-size: 35px;
   text-transform: uppercase;
 }
 
@@ -191,12 +194,54 @@ Page Styles
   text-transform: uppercase;
 }
 
-.articles .articles-parimary img{
-  width: 100%;
+.articles .articles-primary .image-wrapper {
+  border: 10px solid black;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.articles .articles-primary img{
+  max-width: 100%;
+  max-height: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.articles .articles-primary .content{
+  height: 270px;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .articles .articles-latest {
-
+  margin: 20px 0 0 0;
+  border-top: 1px solid black;
+}
+.articles .articles-latest li {
+  padding-left: 100px;
+  border-bottom: 1px solid black;
+}
+.articles .articles-latest li a, .articles .articles-latest li a:visited {
+  text-decoration: none;
+  color: black;
+}
+.articles .articles-latest li a {
+  display: block;
+  padding: 20px 0;
+  
+}
+.articles .articles-latest a h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.articles .articles-latest .read-more-link {
+  color: white;
+  margin-top: 10px;
+  padding: 5px 10px;
+  width: 100px;
+  text-align: center;
+  background-color: black;
 }
 
 /*
