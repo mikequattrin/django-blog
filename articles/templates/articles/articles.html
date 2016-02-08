@@ -5,13 +5,30 @@
 
 <div class="body-wrapper">
     {% include "components/navigation.html" %}
-    <div class="content-wrapper">
-        <section>
+    <div class="content-wrapper articles">
+        <section class="articles-primary">
+            {% if article_random %}
+                <h1>{{ article_random.article_text }}</h1>
+                <p class="article-data">
+                    <span>{{ article_random.article_publication_date|date:"l, F tS, o" }}</span>
+                    <a href="">{{ article_random.article_author }}</a>
+                </p>
+                <img src="../../media/{{ article_random.article_hero_image }}"><br>
+                <p>{{ article_random.article_body_text}}</p>
+            {% else %}
+                <p>Failed to load random article.</p>
+            {% endif %}
+        </section>
+        <section class="articles-latest">
         {% if article_list %}
             <ul>
             {% for article in article_list %}
                 <li>
-                    <a href= "{% url 'article' article.id %}">{{ article.article_text }}</a>
+                    <a href= "{% url 'article' article.id %}">
+                        <h2>{{ article.article_text }}</h2>
+                        <p>{{ article.article_body_text}}</p>
+                        <p class="read-more-link">Read More..</p>
+                    </a>
                 </li>
             {% endfor %}
             </ul>

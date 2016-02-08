@@ -20,7 +20,15 @@ section ul {
   list-style: none;
 }
 
-/* Navigation styles */
+/*
+---------------
+---------------
+Component Styles
+---------------
+---------------
+*/
+
+/* Navigation - Styles */
 .navigation {
     height: 160px;
 }
@@ -99,7 +107,7 @@ background-color: gray;
     padding: 8px;
 }
 
-/*What to Read Next Styles*/
+/*What to Read Next - Styles*/
 .what-to-read-next {
 padding-top: 50px;
 }
@@ -145,7 +153,55 @@ padding-top: 50px;
 
 /*
 ---------------
-Mobile Styles
+---------------
+Page Styles
+---------------
+---------------
+*/
+
+/*Articles - Styles*/
+
+.articles {
+
+}
+
+.articles .articles-primary {
+
+}
+
+.articles .articles-primary h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.articles .articles-primary .article-data {
+  padding-bottom: 10px;
+}
+
+.articles .articles-primary .article-data span {
+  font-size: 10px;
+  text-transform: uppercase;
+  padding-right: 3px;
+  border-right: 1px solid black;
+
+}
+
+.articles .articles-primary .article-data a {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.articles .articles-parimary img{
+  width: 100%;
+}
+
+.articles .articles-latest {
+
+}
+
+/*
+---------------
+Desktop Styles
 ---------------
 */
 
@@ -158,7 +214,7 @@ Mobile Styles
     padding: 0 45px 0 25px;
   }
 
-  /* Navigation Styles */
+  /* Navigation - Styles */
   .navigation {
     float: left;
     width: 150px;
@@ -225,6 +281,6 @@ Mobile Styles
     padding-bottom: 15px;
   }
 
-  /*What to Read Next Styles*/
+  /*What to Read Next - Styles*/
 
 }
