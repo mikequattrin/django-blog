@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+def site_name(request):
+    return {'SITE_NAME': settings.SITE_NAME}
+
 urlpatterns = [
     url(r'^', include('articles.urls')),
     url(r'^admin/', admin.site.urls),

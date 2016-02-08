@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_NAME = "Article Site"
 
 # Application definition
 

@@ -11,17 +11,15 @@
         </div>
     </div>
     <ul class="article-tiles">
-        <li>
-            
-        </li>
-        <li>
-            
-        </li>
-        <li>
-            
-        </li>
-        <li>
-            
-        </li>
+        {% if articles_random %}
+            {% for article in articles_random %}
+                <li>
+                    <img src="../../media/{{ article.article_hero_image }}">
+                    <p>{{ article.article_text }}</p>
+                </li>
+            {% endfor %}
+        {% else %}
+            <p>No articles at the moment.</p>
+        {% endif %}
     </ul>
 </div>

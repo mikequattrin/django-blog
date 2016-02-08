@@ -1,5 +1,6 @@
 {% load staticfiles %}
 
+<title>Articles Listing Page</title>
 <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="{% static 'articles/styles/style.css' %}" />
 
@@ -18,7 +19,7 @@
                     <img src="../../media/{{ article_random.article_hero_image }}">
                 </div>
                 <p class="content">{{ article_random.article_body_text}}</p>
-                <a href="">Read More..</a>
+                <a class="read-more-link" href="">Read More..</a>
             {% else %}
                 <p>Failed to load random article.</p>
             {% endif %}
@@ -28,9 +29,12 @@
             <ul>
             {% for article in article_list %}
                 <li>
+                    <div class="article-number">
+                        <p>{{ article.id }}</p>
+                    </div>
                     <a href= "{% url 'article' article.id %}">
                         <h2>{{ article.article_text }}</h2>
-                        <p>{{ article.article_body_text}}</p>
+                        <p class="sample-text">{{ article.article_body_text}}</p>
                         <p class="read-more-link">Read More..</p>
                     </a>
                 </li>

@@ -33,7 +33,7 @@ Component Styles
 
 /* Navigation - Styles */
 .navigation {
-    height: 160px;
+     : 160px;
 }
 .navigation .logo {
     width: 100%;
@@ -100,7 +100,7 @@ Component Styles
     height: 81px;
 }
 .navigation nav a:active {
-background-color: gray;
+  background-color: gray;
 }
 .navigation nav a svg{
     width: 40px;
@@ -112,7 +112,7 @@ background-color: gray;
 
 /*What to Read Next - Styles*/
 .what-to-read-next {
-padding-top: 50px;
+  padding-top: 50px;
 }
 .what-to-read-next .header{
   height: 40px;
@@ -121,7 +121,7 @@ padding-top: 50px;
   border-bottom: 1px solid black;
 }
 .what-to-read-next .header p{
-  font-size: 25px;
+  font-size: 20px;
   line-height: 40px;
   width: calc(100% - 80px);
   float: left;
@@ -148,10 +148,26 @@ padding-top: 50px;
   float: right;
 }
 .what-to-read-next .article-tiles {
-  
+  list-style: none;
+  padding: 20px 0;
 }
 .what-to-read-next .article-tiles li {
-  
+  height: 100px;
+  width: calc(50% - 10px);
+  float: left;
+  background-color: black;
+  margin: 0 5px;
+}
+.what-to-read-next .article-tiles li:nth-child(3), .what-to-read-next .article-tiles li:nth-child(2) {
+  display: none;
+}
+.what-to-read-next .article-tiles li img {
+  width: 100%;
+  height: auto;
+}
+
+.what-to-read-next .article-tiles li p {
+  margin-top: 5px;
 }
 
 /*
@@ -164,63 +180,62 @@ Page Styles
 
 /*Articles - Styles*/
 
-.articles {
-
-}
-
-.articles .articles-primary {
-
-}
-
 .articles .articles-primary h1 {
   font-size: 35px;
   text-transform: uppercase;
 }
-
 .articles .articles-primary .article-data {
   padding-bottom: 10px;
 }
-
 .articles .articles-primary .article-data span {
   font-size: 10px;
   text-transform: uppercase;
   padding-right: 3px;
   border-right: 1px solid black;
-
 }
-
 .articles .articles-primary .article-data a {
   font-size: 10px;
   text-transform: uppercase;
 }
-
 .articles .articles-primary .image-wrapper {
   border: 10px solid black;
   background-color: black;
   margin-bottom: 10px;
 }
-
 .articles .articles-primary img{
   max-width: 100%;
   max-height: 400px;
   display: block;
   margin: 0 auto;
 }
-
 .articles .articles-primary .content{
   height: 270px;
   white-space: pre-line;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .articles .articles-latest {
   margin: 20px 0 0 0;
   border-top: 1px solid black;
 }
 .articles .articles-latest li {
-  padding-left: 100px;
   border-bottom: 1px solid black;
+  position: relative;
+}
+.articles .articles-latest .article-number {
+  display: none;
+  height: 270px;
+  position: absolute;
+  left: 0px;
+}
+.articles .articles-latest .article-number p{
+  height: 80px;
+  width: 80px;
+  background-color: black;
+  color: white;
+  line-height: 80px;
+  font-size: 30px;
+  text-align: center;
 }
 .articles .articles-latest li a, .articles .articles-latest li a:visited {
   text-decoration: none;
@@ -232,11 +247,18 @@ Page Styles
   
 }
 .articles .articles-latest a h2 {
-  font-size: 20px;
+  font-size: 30px;
   padding-bottom: 10px;
 }
-.articles .articles-latest .read-more-link {
+.articles .articles-latest a .sample-text {
+  height: 170px;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.articles .read-more-link {
   color: white;
+  display: block;
   margin-top: 10px;
   padding: 5px 10px;
   width: 100px;
@@ -327,5 +349,22 @@ Desktop Styles
   }
 
   /*What to Read Next - Styles*/
+  .what-to-read-next .article-tiles li {
+    height: 100px;
+    width: calc(25% - 14px);
+  }
+ .what-to-read-next .article-tiles li img{
+    height: 100%;
+  }
+  .what-to-read-next .article-tiles li:nth-child(3), .what-to-read-next .article-tiles li:nth-child(2) {
+    display: block;
+  }
 
+  /*Articles - Styles*/
+  .articles .articles-latest li {
+    padding-left: 100px;
+  }
+  .articles .articles-latest .article-number {
+    display: block;
+  }
 }
