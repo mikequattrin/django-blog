@@ -6,15 +6,19 @@
 
 <div class="body-wrapper">
     {% include "components/navigation.html" %}
-    <div class="content-wrapper">
-        {{ article.article_text }}<br>
-        {{ article.article_author }}<br>
-        {{ article.article_publication_date }}<br>
-        {{ article.article_category }}<br>
-        <img src="../../media/{{ article.article_hero_image }}"><br>
-        <img src="../../media/{{ article.article_optional_image }}"><br>
-        {{ article.article_body_text }}<br>
-
+    <div class="content-wrapper article">
+        <h1>{{ article.article_text }}</h1>
+        <p class="article-data">
+            <span>{{ article.article_publication_date|date:"l, F tS, o" }}</span>
+            <a href="#">{{ article.article_author }}</a>
+        </p>
+        <div class="image-wrapper">
+            <img class="primary-image" src="../../media/{{ article.article_hero_image }}"><br>
+        </div>
+        <p class="article-text">{{ article.article_body_text }}</p>
+        <div class="image-wrapper alt-image">
+            <img class="secondary-image" src="../../media/{{ article.article_optional_image }}"><br>
+        </div>
         {% include "components/whattoreadnext.html" %}
     </div>
 </div>
