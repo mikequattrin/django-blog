@@ -3,3 +3,4 @@
 ### Build Stack
 + Django
 + SQLite (Django Default)
++ Pillow

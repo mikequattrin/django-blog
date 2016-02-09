@@ -149,7 +149,8 @@ Component Styles
 }
 .what-to-read-next .article-tiles {
   list-style: none;
-  padding: 20px 0;
+  height: 120px;
+  padding: 20px 0 40px 0;
 }
 .what-to-read-next .article-tiles li {
   height: 100px;
@@ -167,6 +168,9 @@ Component Styles
 }
 .what-to-read-next .article-tiles li p {
   margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /*
@@ -390,7 +394,7 @@ Desktop Styles
   /*What to Read Next - Styles*/
   .what-to-read-next .article-tiles li {
     height: 100px;
-    width: calc(25% - 14px);
+    width: calc(25% - 10px);
   }
  .what-to-read-next .article-tiles li img{
     height: 100%;
